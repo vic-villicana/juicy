@@ -25,17 +25,17 @@ const menuOptions = [
     },
     {
         menu:'Daily Specials',
-        img:DailySpecials,
+        img:Sides,
         id:3
     },
     {
-        menu:'Drinks',
+        menu:'Vegan Menu',
         img:Catering,
         id:4
     },
     {
-        menu:'sides',
-        img:Sides,
+        menu:'Kids Menu',
+        img:DailySpecials,
         id:5
     },
 ]
