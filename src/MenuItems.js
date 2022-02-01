@@ -18,7 +18,7 @@ class MenuItems extends React.Component {
             <div  className='menu-items' onClick={this.itemChoosen}>
                 <div className='menu-pic' style={{backgroundImage:`url(${this.props.imgs})`}}></div>
                 <div className='simple-flex'>
-                    <div className='menu-title'>{this.props.dish}<br/>con fajitas de res</div>
+                    <div className='menu-title'>{this.props.dish}<br/></div>
                     <div className='menu-price'>${this.props.price}.00</div>
                 </div>
             </div>
