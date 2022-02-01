@@ -34,6 +34,7 @@ class Field extends React.Component{
         return (
             <div>
                 <input
+                    type="text"
                     placeholder={this.props.placeholder}
                     value={this.state.value}
                     onChange={this.onChange}
