@@ -117,11 +117,11 @@ const menuItems = [
         selected:{}
     },
     {
-        menuId:0,
+        menuId:1,
         menuItemId:4,
-        dish:'huaraches',
+        dish:'huaraches De Pollo',
         price:10.00,
-        description:'The Origonal Huarache',
+        description:'The Original Huarache',
         quantity:1,
         img:huaraches,
         subs:[
@@ -144,7 +144,7 @@ const menuItems = [
         selected:{}
     },
     {
-        menuId:0,
+        menuId:1,
         menuItemId:5,
         dish:'mole',
         price:15.00,
@@ -170,7 +170,7 @@ const menuItems = [
         ],
         selected:{}
     },{
-        menuId:0,
+        menuId:1,
         menuItemId:6,
         dish:'Enchiladas Verdes',
         side:'fajitas',
@@ -281,7 +281,7 @@ const menuItems = [
     {
         menuId:2,
         menuItemId:10,
-        dish:'Tinga',
+        dish:'Chicken Tinga Tostadas',
         price:25.00,
         description:'Shredded chicken marinated in chipotle special Sauce',
         quantity:1,
@@ -416,9 +416,9 @@ const menuItems = [
     {
         menuId:3,
         menuItemId:15,
-        dish:'Huaraches',
+        dish:'Huarache de carne cpn chile',
         price:10.00,
-        description:'The Origonal Huarache',
+        description:'The Original Huarache',
         quantity:1,
         img:huaraches,
         subs:[
@@ -448,6 +448,313 @@ const menuItems = [
         description:'Traditional ancient recipe handed down genration after generation',
         quantity:1,
         img:mole,
+        subs:[
+            {
+                item:'fries',
+                price:3.00,
+                img:''
+            },
+            {
+                item:'rice',
+                price:3.00,
+                img:''
+            },
+            {
+                item:'beans',
+                price:3.00,
+                img:''
+            },
+        ],
+        selected:{}
+    },{
+        menuId:3,
+        menuItemId:0,
+        dish:'tacos',
+        price:2.00,
+        description:'The best tacos on the planet',
+        quantity:1,
+        img:taco,
+        subs:[
+            {
+                item:'fries',
+                price:3.00,
+                img:''
+            },
+            {
+                item:'rice',
+                price:3.00,
+                img:''
+            },
+            {
+                item:'beans',
+                price:3.00,
+                img:''
+            },
+        ],
+        selected:{}
+    },
+    {
+        menuId:3,
+        menuItemId:1,
+        dish:'Burrito',
+        price:12.00,
+        description:'The best burrito in the world',
+        quantity:1,
+        img:burry,
+        subs:[
+            {
+                item:'fries',
+                price:3.00,
+                img:''
+            },
+            {
+                item:'rice',
+                price:3.00,
+                img:''
+            },
+            {
+                item:'beans',
+                price:3.00,
+                img:''
+            },
+        ],
+        selected:{}
+    },
+    {
+        menuId:3,
+        menuItemId:2,
+        dish:'Enchiladas Verdes',
+        side:'fajitas',
+        price:24.00,
+        description:'The best combo plate in town',
+        quantity:1,
+        img:enchiladas,
+        subs:[
+            {
+                item:'fries',
+                price:3.00,
+                img:''
+            },
+            {
+                item:'rice',
+                price:3.00,
+                img:''
+            },
+            {
+                item:'beans',
+                price:3.00,
+                img:''
+            },
+        ],
+        selected:{}
+    },
+    {
+        menuId:4,
+        menuItemId:3,
+        dish:'Beyond Meat Tostadas',
+        price:5.00,
+        description:'Traditional Horchata made from scratch',
+        quantity:1,
+        img:tinga,
+        subs:[
+            {
+                item:'fries',
+                price:3.00,
+                img:''
+            },
+            {
+                item:'rice',
+                price:3.00,
+                img:''
+            },
+            {
+                item:'beans',
+                price:3.00,
+                img:''
+            },
+        ],
+        selected:{}
+    },
+    {
+        menuId:4,
+        menuItemId:4,
+        dish:'Fried Avocado Huaraches',
+        price:10.00,
+        description:'The Original Huarache, now even better.',
+        quantity:1,
+        img:huaraches,
+        subs:[
+            {
+                item:'fries',
+                price:3.00,
+                img:''
+            },
+            {
+                item:'rice',
+                price:3.00,
+                img:''
+            },
+            {
+                item:'beans',
+                price:3.00,
+                img:''
+            },
+        ],
+        selected:{}
+    },
+    {
+        menuId:4,
+        menuItemId:5,
+        dish:'Michoacan Style Mole',
+        price:15.00,
+        description:'Traditional ancient recipe handed down genration after generation',
+        quantity:1,
+        img:mole,
+        subs:[
+            {
+                item:'fries',
+                price:3.00,
+                img:''
+            },
+            {
+                item:'rice',
+                price:3.00,
+                img:''
+            },
+            {
+                item:'beans',
+                price:3.00,
+                img:''
+            },
+        ],
+        selected:{}
+    },{
+        menuId:4,
+        menuItemId:6,
+        dish:'Enchiladas Rojas De Papa',
+        side:'fajitas',
+        price:24.00,
+        description:'The best combo plate in town',
+        quantity:1,
+        img:enchiladas,
+        subs:[
+            {
+                item:'fries',
+                price:3.00,
+                img:''
+            },
+            {
+                item:'rice',
+                price:3.00,
+                img:''
+            },
+            {
+                item:'beans',
+                price:3.00,
+                img:''
+            },
+        ],
+        selected:{}
+    },{
+        menuId:5,
+        menuItemId:0,
+        dish:'Fried chicken tacos',
+        price:2.00,
+        description:'The best tacos on the planet',
+        quantity:1,
+        img:taco,
+        subs:[
+            {
+                item:'fries',
+                price:3.00,
+                img:''
+            },
+            {
+                item:'rice',
+                price:3.00,
+                img:''
+            },
+            {
+                item:'beans',
+                price:3.00,
+                img:''
+            },
+        ],
+        selected:{}
+    },
+    {
+        menuId:5,
+        menuItemId:1,
+        dish:'Burrito',
+        price:12.00,
+        description:'The best burrito in the world',
+        quantity:1,
+        img:burry,
+        subs:[
+            {
+                item:'fries',
+                price:3.00,
+                img:''
+            },
+            {
+                item:'rice',
+                price:3.00,
+                img:''
+            },
+            {
+                item:'beans',
+                price:3.00,
+                img:''
+            },
+        ],
+        selected:{}
+    },{
+        menuId:5,
+        menuItemId:2,
+        dish:'Enchiladas Verdes',
+        side:'fajitas',
+        price:24.00,
+        description:'The best combo plate in town',
+        quantity:1,
+        img:enchiladas,
+        subs:[
+            {
+                item:'fries',
+                price:3.00,
+                img:''
+            },
+            {
+                item:'rice',
+                price:3.00,
+                img:''
+            },
+            {
+                item:'beans',
+                price:3.00,
+                img:''
+            },
+        ],
+        selected:{}
+    },
+    {
+        menuId:5,
+        menuItemId:3,
+        dish:'Beyond Meat Tostadas',
+        price:5.00,
+        description:'Traditional Horchata made from scratch',
+        quantity:1,
+        img:tinga,
+        
+        selected:{}
+    },
+    {
+        menuId:5,
+        menuItemId:4,
+        dish:'Fried Avocado Huaraches',
+        price:10.00,
+        description:'The Original Huarache, now even better.',
+        quantity:1,
+        img:huaraches,
         subs:[
             {
                 item:'fries',
