@@ -8,7 +8,7 @@ const Ddown = () => {
     const links = [
         {
             linkText:'home',
-            href:'/home'
+            href:'/'
         },
         {
             linkText:'menu',
@@ -16,7 +16,7 @@ const Ddown = () => {
         },
         {
             linkText:'order',
-            href:'/'
+            href:'/order'
         },
         {
             linkText:'cart',

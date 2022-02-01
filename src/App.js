@@ -66,7 +66,7 @@ class App extends React.Component {
     return(
       <div>
         <Ddown />
-        <Router path='/' >
+        <Router path='/order' >
           <DashboardMenu handleClick={this.handleClick} />
         </Router>
         <Router path='/menu'>
@@ -78,7 +78,7 @@ class App extends React.Component {
         <Router path="/cart">
           <Cart items={this.state.cart} />
         </Router>
-        <Router path='/home'>
+        <Router path='/'>
           <Home />
         </Router>
         <Footer/>
