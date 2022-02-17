@@ -15,7 +15,7 @@ import Footer from './components/Footer.js'
 class App extends React.Component {
   constructor(props){
     super(props)
-    this.state = { menu:3, isItemOpen:false, item:{}, cart:[]}
+    this.state = { menu:3, item:{}, cart:[]}
     this.handleClick = this.handleClick.bind(this)
     this.handleItemClick = this.handleItemClick.bind(this)
     this.changeQuantity = this.changeQuantity.bind(this)
@@ -28,7 +28,7 @@ class App extends React.Component {
   }
 
   handleItemClick(item){
-    this.setState({isMenuOpen:false, isItemOpen:true, item:item})
+    this.setState({item:item})
     
   }
   
