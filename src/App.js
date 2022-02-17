@@ -15,7 +15,7 @@ import Footer from './components/Footer.js'
 class App extends React.Component {
   constructor(props){
     super(props)
-    this.state = {isMenuOpen:false, menu:3, isItemOpen:false, item:{}, cart:[]}
+    this.state = { menu:3, isItemOpen:false, item:{}, cart:[]}
     this.handleClick = this.handleClick.bind(this)
     this.handleItemClick = this.handleItemClick.bind(this)
     this.changeQuantity = this.changeQuantity.bind(this)
@@ -23,7 +23,7 @@ class App extends React.Component {
   }
 
   handleClick(menuId){
-    this.setState({isMenuOpen:true, menu:menuId})
+    this.setState({menu:menuId})
     console.log(menuId)
   }
 
@@ -62,7 +62,7 @@ class App extends React.Component {
  
   
   render(){
-    console.log(this.state.item)
+    console.log(this.state)
     return(
       <div>
         <Ddown />
