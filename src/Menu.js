@@ -6,6 +6,8 @@ import enchiladas from './imgs/enchiladas.jpg'
 import tinga from './imgs/tinga.jpg'
 import mole from './imgs/mole.jpg'
 import huaraches from './imgs/huaraches.jpg'
+//import connect funciton
+import {connect} from 'react-redux'
 const menuItems = [
     {
         menuId:0,
@@ -793,8 +795,10 @@ class Menu extends React.Component {
     }
 
     render() {
-        let Items = menuItems.filter(item =>  item.menuId === this.props.menuId)
-        
+        //access the menu data through props and filter/map
+        let Items = this.props.theItems.filter(item =>  item.menuId === this.props.menuIdd)
+        console.log(Items)
+        console.log(this.props.menuIdd)
         let menuItem = Items.map((item, i) => (
             <MenuItems imgs={item.img} key={i} href='/item' dish={item.dish} price={item.price} desc={item.description} quantity={item.quantity} subis={item.subs} onClick={this.chooseItem} />
         ))
@@ -808,5 +812,14 @@ class Menu extends React.Component {
         )
     }
 }
-
-export default Menu
+//use our mapStateToPropsFunction to access our state(so we can grab our Menu state data)
+const mapStateToProps = (state) => {
+    console.log(state)
+    return {
+        theItems: state.menuItems,
+        menuIdd: state.menus
+    }
+}
+//replace this export with our connect fnuction export 
+export default connect(mapStateToProps)(Menu)
+// export default Menu

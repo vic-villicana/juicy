@@ -1,14 +1,12 @@
 import React from 'react'
-//import MenuItems from './MenuItems.js'
-
  class MenuTile extends React.Component {
     constructor(props){
         super(props)
         this.handleIt = this.handleIt.bind(this)
     }
     handleIt(){
-       this.props.onClick(this.props.id, this.props.href)
-        
+       this.props.onClick(this.props.id, this.props.href)      
+       
     }
     render() {
         return(

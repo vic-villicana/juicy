@@ -6,6 +6,8 @@ import aLaCarte from './imgs/platos.jpg'
 import DailySpecials from './imgs/burrito.jpg'
 import Catering from './imgs/chilis.jpg'
 import Sides from './imgs/fajitas.jpg'
+import {selectMenu} from './actions'
+import { connect } from 'react-redux'
 
 const menuOptions = [
     {
@@ -48,12 +50,16 @@ class MenuList extends React.Component{
    }
 
    clickIt(menuId, link){
+    
+    //replace this funciton with action call here 
+    this.props.selectMenu(menuId)
+    console.log(menuId)
+    //this.props.handleClick(menuId)
     window.history.pushState({}, '', link)
-    
-    this.props.handleClick(menuId)
-    
    }
     render(){
+        console.log(this.props)
+
         //any time we render a list of items we must append a unique "key" prop
         const tiles = menuOptions.map((option) => (
             // console.log(option.img)
@@ -69,4 +75,16 @@ class MenuList extends React.Component{
     
 }
 
-export default MenuList
+//add our mapStateToProps function to give this component access to redux store
+//(in this component we only need access to our action creator function not our menu store)
+const mapStateToProps = (state) => {
+    console.log(state)
+    return {
+        menuoptions:state.menus,
+        menuItems:state.menuItems
+    }
+}
+//replace this exported module with your connect function to connect this components
+//action creator with the redux store reducers.
+export default connect(mapStateToProps, {selectMenu})(MenuList)
+// export default MenuList

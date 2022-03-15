@@ -10,20 +10,25 @@ import Home from './components/Home'
 import Ddown from './components/Ddown';
 import Footer from './components/Footer.js'
 
+import {connect} from 'react-redux'
+import {selectMenu} from './actions'
+
 //how do i get the data values i need out of div DOM elements?
 //should i use a diffrent element for this?(ex. buttons, etc..)
 class App extends React.Component {
   constructor(props){
     super(props)
-    this.state = { menu:3, item:{}, cart:[]}
+    this.state = {item:{}, cart:[]}
     this.handleClick = this.handleClick.bind(this)
     this.handleItemClick = this.handleItemClick.bind(this)
     this.changeQuantity = this.changeQuantity.bind(this)
     this.sendToCart = this.sendToCart.bind(this)
   }
 
+  
   handleClick(menuId){
-    this.setState({menu:menuId})
+    // this.setState({menu:menuId})
+    this.props.selectMenu(menuId)
     console.log(menuId)
   }
 
@@ -70,7 +75,7 @@ class App extends React.Component {
           <DashboardMenu handleClick={this.handleClick} />
         </Router>
         <Router path='/menu'>
-          <Menu handleItemClick={this.handleItemClick} menuId={this.state.menu} />
+          <Menu handleItemClick={this.handleItemClick} menuId={this.props.menuId} />
         </Router>
         <Router path='/item'>
           <MenuItem theItem={this.state.item} changeQuantity={this.changeQuantity} sendToCart={this.sendToCart} />
@@ -87,7 +92,15 @@ class App extends React.Component {
     
   }
 }
-export default App;
+
+const mapStateToProps = (state) => {
+  console.log(state)
+  return{
+    menuId: state.menus
+  }
+}
+
+export default connect(mapStateToProps, {selectMenu})(App);
 
 // if(this.state.isMenuOpen === false && this.state.isItemOpen === false){
 
