@@ -1,41 +1,13 @@
 import {combineReducers} from 'redux'
 import menuReducer from './menuReducer.js'
+import taco from '../imgs/tacos.jpg'
+import burry from '../imgs/burry.jpg'
+import enchiladas from '../imgs/enchiladas.jpg'
+import mole from '../imgs/mole.jpg'
+import tinga from '../imgs/tinga.jpg'
+import huaraches from '../imgs/huaraches.jpg'
 
-const menussss = () => {
-    return [
-        {
-            menu:'FamilyMeals',
-            img:'FamilyMeals',
-            id:0
-        },
-        {
-            menu:'Dinner Menu',
-            img:'Individuals',
-            id:1
-        },
-        {
-            menu:'a La Carte',
-            img:'aLaCarte',
-            id:2
-        },
-        {
-            menu:'Daily Specials',
-            img:'Sides',
-            id:3
-        },
-        {
-            menu:'Vegan Menu',
-            img:'Catering',
-            id:4
-        },
-        {
-            menu:'Kids Menu',
-            img:'DailySpecials',
-            id:5
-        },
-    ]
-    
-}
+
 const menu = () => {
     const menuItems = [
         {
@@ -45,7 +17,7 @@ const menu = () => {
             price:2.00,
             description:'The best tacos on the planet',
             quantity:1,
-            img:'taco',
+            img:taco,
             subs:[
                 {
                     item:'fries',
@@ -72,7 +44,7 @@ const menu = () => {
             price:12.00,
             description:'The best burrito in the world',
             quantity:1,
-            img:'burry',
+            img:burry,
             subs:[
                 {
                     item:'fries',
@@ -100,7 +72,7 @@ const menu = () => {
             price:24.00,
             description:'The best combo plate in town',
             quantity:1,
-            img:'enchiladas',
+            img:enchiladas,
             subs:[
                 {
                     item:'fries',
@@ -127,7 +99,7 @@ const menu = () => {
             price:25.00,
             description:'Shredded chicken marinated in chipotle special Sauce',
             quantity:1,
-            img:'tinga',
+            img:tinga,
             subs:[
                 {
                     item:'fries',
@@ -154,7 +126,7 @@ const menu = () => {
             price:10.00,
             description:'The Original Huarache',
             quantity:1,
-            img:'huaraches',
+            img:huaraches,
             subs:[
                 {
                     item:'fries',
@@ -181,7 +153,7 @@ const menu = () => {
             price:15.00,
             description:'Traditional ancient recipe handed down genration after generation',
             quantity:1,
-            img:'mole',
+            img:mole,
             subs:[
                 {
                     item:'fries',
@@ -208,7 +180,7 @@ const menu = () => {
             price:24.00,
             description:'The best combo plate in town',
             quantity:1,
-            img:'enchiladas',
+            img:enchiladas,
             subs:[
                 {
                     item:'fries',
@@ -235,7 +207,7 @@ const menu = () => {
             price:25.00,
             description:'Shredded chicken marinated in chipotle special Sauce',
             quantity:1,
-            img:'tinga',
+            img:tinga,
             subs:[
                 {
                     item:'fries',
@@ -262,7 +234,7 @@ const menu = () => {
             price:10.00,
             description:'The Origonal Huarache',
             quantity:1,
-            img:'huaraches',
+            img:huaraches,
             subs:[
                 {
                     item:'fries',
@@ -289,7 +261,7 @@ const menu = () => {
             price:15.00,
             description:'Traditional ancient recipe handed down genration after generation',
             quantity:1,
-            img:'mole',
+            img:mole,
             subs:[
                 {
                     item:'fries',
@@ -316,7 +288,7 @@ const menu = () => {
             price:25.00,
             description:'Shredded chicken marinated in chipotle special Sauce',
             quantity:1,
-            img:'tinga',
+            img:tinga,
             subs:[
                 {
                     item:'fries',
@@ -343,7 +315,7 @@ const menu = () => {
             price:10.00,
             description:'The Origonal Huarache',
             quantity:1,
-            img:'huaraches',
+            img:huaraches,
             subs:[
                 {
                     item:'fries',
@@ -370,7 +342,7 @@ const menu = () => {
             price:15.00,
             description:'Traditional ancient recipe handed down genration after generation',
             quantity:1,
-            img:'mole',
+            img:mole,
             subs:[
                 {
                     item:'fries',
@@ -397,7 +369,7 @@ const menu = () => {
             price:24.00,
             description:'The best combo plate in town',
             quantity:1,
-            img:'enchiladas',
+            img:enchiladas,
             subs:[
                 {
                     item:'fries',
@@ -424,7 +396,7 @@ const menu = () => {
             price:25.00,
             description:'Shredded chicken marinated in chipotle special Sauce',
             quantity:1,
-            img:'tinga',
+            img:tinga,
             subs:[
                 {
                     item:'fries',
@@ -451,7 +423,7 @@ const menu = () => {
             price:10.00,
             description:'The Original Huarache',
             quantity:1,
-            img:'huaraches',
+            img:huaraches,
             subs:[
                 {
                     item:'fries',
@@ -478,7 +450,7 @@ const menu = () => {
             price:15.00,
             description:'Traditional ancient recipe handed down genration after generation',
             quantity:1,
-            img:'mole',
+            img:mole,
             subs:[
                 {
                     item:'fries',
@@ -504,7 +476,7 @@ const menu = () => {
             price:2.00,
             description:'The best tacos on the planet',
             quantity:1,
-            img:'taco',
+            img:taco,
             subs:[
                 {
                     item:'fries',
@@ -531,7 +503,7 @@ const menu = () => {
             price:12.00,
             description:'The best burrito in the world',
             quantity:1,
-            img:'burry',
+            img:burry,
             subs:[
                 {
                     item:'fries',
@@ -559,7 +531,7 @@ const menu = () => {
             price:24.00,
             description:'The best combo plate in town',
             quantity:1,
-            img:'enchiladas',
+            img:enchiladas,
             subs:[
                 {
                     item:'fries',
@@ -586,7 +558,7 @@ const menu = () => {
             price:5.00,
             description:'Traditional Horchata made from scratch',
             quantity:1,
-            img:'tinga',
+            img:tinga,
             subs:[
                 {
                     item:'fries',
@@ -613,7 +585,7 @@ const menu = () => {
             price:10.00,
             description:'The Original Huarache, now even better.',
             quantity:1,
-            img:'huaraches',
+            img:huaraches,
             subs:[
                 {
                     item:'fries',
@@ -640,7 +612,7 @@ const menu = () => {
             price:15.00,
             description:'Traditional ancient recipe handed down genration after generation',
             quantity:1,
-            img:'mole',
+            img:mole,
             subs:[
                 {
                     item:'fries',
@@ -667,7 +639,7 @@ const menu = () => {
             price:24.00,
             description:'The best combo plate in town',
             quantity:1,
-            img:'enchiladas',
+            img:enchiladas,
             subs:[
                 {
                     item:'fries',
@@ -693,7 +665,7 @@ const menu = () => {
             price:2.00,
             description:'The best tacos on the planet',
             quantity:1,
-            img:'taco',
+            img:taco,
             subs:[
                 {
                     item:'fries',
@@ -720,7 +692,7 @@ const menu = () => {
             price:12.00,
             description:'The best burrito in the world',
             quantity:1,
-            img:'burry',
+            img:burry,
             subs:[
                 {
                     item:'fries',
@@ -747,7 +719,7 @@ const menu = () => {
             price:24.00,
             description:'The best combo plate in town',
             quantity:1,
-            img:'enchiladas',
+            img:enchiladas,
             subs:[
                 {
                     item:'fries',
@@ -774,7 +746,7 @@ const menu = () => {
             price:5.00,
             description:'Traditional Horchata made from scratch',
             quantity:1,
-            img:'tinga',
+            img:tinga,
             
             selected:{}
         },
@@ -785,7 +757,7 @@ const menu = () => {
             price:10.00,
             description:'The Original Huarache, now even better.',
             quantity:1,
-            img:'huaraches',
+            img:huaraches,
             subs:[
                 {
                     item:'fries',
