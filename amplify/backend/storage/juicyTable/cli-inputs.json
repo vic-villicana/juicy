@@ -1,0 +1,10 @@
+{
+  "resourceName": "juicyTable",
+  "tableName": "promoTable",
+  "partitionKey": {
+    "fieldName": "email",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}

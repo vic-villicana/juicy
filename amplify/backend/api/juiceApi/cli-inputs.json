@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "paths": {
+    "/promos": {
+      "name": "/promos",
+      "lambdaFunction": "promoLambda",
+      "permissions": {
+        "setting": "protected",
+        "auth": [
+          "read",
+          "delete"
+        ],
+        "guest": [
+          "create",
+          "update"
+        ]
+      }
+    }
+  }
+}
