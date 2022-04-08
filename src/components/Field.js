@@ -8,7 +8,7 @@ class Field extends React.Component{
         name: PropTypes.string.isRequired,
         value: PropTypes.string,
         validate: PropTypes.func,
-        onChange: PropTypes.func.isRequired
+        changed: PropTypes.func.isRequired
     };
 
     state = {
