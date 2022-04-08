@@ -59,11 +59,13 @@ class App extends React.Component {
     const name = quan.name
     const value = quan.value
     const newItem = Object.assign({}, this.state.item)
-        
-    if(value === 'true'){
-      newItem[name] = this.state.item.quantity + 1
-    }else {
-      newItem[name] = this.state.item.quantity - 1
+    const quantity = this.state.item.quantity    
+
+    console.log(value)
+    if(value){
+      newItem[name] = quantity + 1
+    }else if(!value && quantity > 1){
+      newItem[name] = quantity - 1
     }
 
     this.setState({item:newItem})

@@ -7,7 +7,8 @@ class QuantityCounter extends React.Component {
       
     //   console.log(this.props)
       this.props.changeQuantity(btn)
-    // console.log(`clicked on the ${btn.name}: ${btn.value}`)
+    console.log(typeof btn.value)
+    console.log(btn)
   }
 
     render() {
@@ -17,9 +18,9 @@ class QuantityCounter extends React.Component {
                     <p>Quantity</p>
                 </div>
                 <div className='counter'>
-                    <button name='quantity' className='minus' value={false} onClick={this.onbuttonClick}><i className="icon angle down"></i></button>
+                    <button name='quantity' className='minus' value={undefined} onClick={this.onbuttonClick}><i className="icon angle down"></i></button>
                     <p className='counter-window'>{this.props.quantity}</p>
-                    <button name='quantity' className='plus' value={true} onClick={this.onbuttonClick}><i className="icon angle up"></i></button>
+                    <button name='quantity' className='plus' value='true' onClick={this.onbuttonClick}><i className="icon angle up"></i></button>
                     
                 </div>
             </div>
