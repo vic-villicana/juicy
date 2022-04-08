@@ -48,7 +48,6 @@ class Form extends React.Component{
         const fieldErrors = Object.assign({}, this.state.fieldErrors)
         fieldErrors[name] = error
         obj[name] = value
-        console.log(obj)
         this.setState({fields:obj, fieldErrors})
     }
 
@@ -70,25 +69,28 @@ class Form extends React.Component{
     //     event.preventDefault()
 
     // }
-
+        
         onFormSubmit(event) {
             const people = this.state.emailList
             const person = this.state.fields
             event.preventDefault()
-
+            
             if (this.validate()) return 
-
-            this.setState({
-                people: people.concat(person),
-                fields:{
-                    name: '',
-                    email: ''
-                }
-            })
+            //call your api here and persist the state if the request succeeds
+            this.props.promo(person)
+            
+            // this.setState({
+            //     people: people.concat(person),
+            //     fields:{
+            //         name: '',
+            //         email: ''
+            //     }
+            // })
+            
         }
 
     render() {
-        console.log(this.state)
+       
         return (
             <div className="form-section info-container">
                 <form onSubmit={this.onFormSubmit}>

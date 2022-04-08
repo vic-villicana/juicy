@@ -13,8 +13,11 @@ import Footer from './components/Footer.js'
 import {connect} from 'react-redux'
 import {selectMenu} from './actions'
 
-//how do i get the data values i need out of div DOM elements?
-//should i use a diffrent element for this?(ex. buttons, etc..)
+import {Amplify, API} from 'aws-amplify'
+import awsConfig from './aws-exports'
+
+Amplify.configure(awsConfig)
+
 class App extends React.Component {
   constructor(props){
     super(props)
@@ -23,8 +26,23 @@ class App extends React.Component {
     this.handleItemClick = this.handleItemClick.bind(this)
     this.changeQuantity = this.changeQuantity.bind(this)
     this.sendToCart = this.sendToCart.bind(this)
+    this.formPromo = this.formPromo.bind(this)
   }
 
+  formPromo(init){
+    const apiName = 'juiceApi'; // replace this with your api name.
+    const path = '/promos'
+    const myInit = {
+      body:{init}
+    }
+    API.post(apiName, path, myInit).then(res => {
+      return res.data
+    })
+    .catch(err => {
+      console.log(err.response)
+    })
+   
+  }
   
   handleClick(menuId){
     // this.setState({menu:menuId})
@@ -84,7 +102,7 @@ class App extends React.Component {
           <Cart items={this.state.cart} />
         </Router>
         <Router path='/'>
-          <Home />
+          <Home promoSub={this.formPromo} />
         </Router>
         <Footer/>
       </div>

@@ -9,7 +9,8 @@ import sign from '../imgs/sign.jpg'
 import TacoHeader from '../components/TacoHeader'
 import Form from '../components/Form'
 
-const Home = () => {
+const Home = (props) => {
+
     return(
         <div>
             <TacoHome />
@@ -102,7 +103,7 @@ const Home = () => {
                             sign Up for monthly promotions and special offers.
                         </p>
                     </div>
-                    <Form />
+                    <Form promo={props.promoSub} />
                 </div>
             </section>
         </div>
