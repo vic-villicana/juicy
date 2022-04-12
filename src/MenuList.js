@@ -58,7 +58,7 @@ class MenuList extends React.Component{
     window.history.pushState({}, '', link)
    }
     render(){
-        console.log(this.props)
+       
 
         //any time we render a list of items we must append a unique "key" prop
         const tiles = menuOptions.map((option) => (
