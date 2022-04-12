@@ -36,6 +36,14 @@
     list-style:none
   }
 
+  textarea{
+    width:90%;
+    margin:0 auto;
+    margin-bottom: 1.5em;
+    padding-left:.5em;
+    border-radius:6px;
+  }
+
   nav{
     display:flex;
     justify-content: space-between;
@@ -46,6 +54,11 @@
     background:rgba(16, 214, 92, 0.877);
   }
 
+  .title{
+    font-family: 'IM Fell English SC', serif;
+    text-align: center;
+    font-size:170%;
+  }
   .logo{
     height:3em;
     width:3em;
@@ -707,6 +720,12 @@
   .contact-form{
     margin:6em auto 0;
     padding-bottom:6em;
+  }
+
+  .contact-us{
+   
+    border-radius:14px;
+    padding:2em 0;
   }
 
 }
