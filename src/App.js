@@ -9,6 +9,7 @@ import Cart from './components/Cart'
 import Home from './components/Home'
 import Ddown from './components/Ddown';
 import Footer from './components/Footer.js'
+import ContactForm from './components/ContactForm.js'
 
 import {connect} from 'react-redux'
 import {selectMenu} from './actions'
@@ -105,6 +106,9 @@ class App extends React.Component {
         </Router>
         <Router path='/'>
           <Home promoSub={this.formPromo} />
+        </Router>
+        <Router path='/contact'>
+          <ContactForm  />
         </Router>
         <Footer/>
       </div>
