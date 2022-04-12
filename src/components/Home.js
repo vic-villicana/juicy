@@ -64,7 +64,7 @@ const Home = (props) => {
                     img={sign}
                 >
                     
-                    <StanBtn >
+                    <StanBtn href={"/contact"} >
                         Contact Us
                     </StanBtn>
                 </Card>
