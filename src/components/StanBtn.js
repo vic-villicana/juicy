@@ -1,9 +1,11 @@
-const StandardBtn = ({className, children}) => {
+import Link from '../Link'
+
+const StanBtn = ({className, href, children}) => {
     return (
         <button className={`standard-btn ${className}`} >
-           {children}
+           <Link href={href}>{children}</Link>
         </button>
     )
 }
 
-export default StandardBtn
+export default StanBtn

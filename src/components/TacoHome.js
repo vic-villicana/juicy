@@ -1,5 +1,5 @@
 import chilis from '../imgs/platos.jpg'
-import StandardBtn from './StanBtn'
+import StanBtn from './StanBtn'
 
 const TacoHome = (props) => {
    
@@ -8,12 +8,12 @@ const TacoHome = (props) => {
         <div className="home-header">
             <h1>Juicy Juice Tacos</h1>
             <div className="home-btn">
-                <StandardBtn>
+                <StanBtn href="/order">
                     Order Now
-                </StandardBtn>
-                <StandardBtn>
+                </StanBtn>
+                <StanBtn>
                     Catering
-                </StandardBtn>
+                </StanBtn>
             </div>
         </div>
         

@@ -1,6 +1,6 @@
 import TacoHome from './TacoHome'
 import mexicanTable from '../imgs/mexicantable.jpg'
-import StandardBtn from '../components/StanBtn'
+import StanBtn from '../components/StanBtn'
 import pattern from '../imgs/pattern.jpg'
 import chilis from '../imgs/chilis.jpg'
 import Card from './Card'
@@ -31,9 +31,9 @@ const Home = (props) => {
                         our own meal prep service!
                     </p>
                 </div>
-                <StandardBtn className="info-btn">
+                <StanBtn className="info-btn">
                     Book Event
-                </StandardBtn>
+                </StanBtn>
             </section>
             <section className="cards" >
                 <div className="sub-heading">
@@ -45,28 +45,28 @@ const Home = (props) => {
                     img={chilis}
                 >
                     
-                    <StandardBtn >
+                    <StanBtn href="/order">
                         Order Now
-                    </StandardBtn>
+                    </StanBtn>
                 </Card>
-                <Card po
+                <Card 
                 
                     name="Family, Food, Tradition"
                     img={mexitable}
                 >
                     
-                    <StandardBtn >
+                    <StanBtn >
                         Book Event
-                    </StandardBtn>
+                    </StanBtn>
                 </Card>
                 <Card 
                     name="Ask us Anything"
                     img={sign}
                 >
                     
-                    <StandardBtn >
+                    <StanBtn >
                         Contact Us
-                    </StandardBtn>
+                    </StanBtn>
                 </Card>
             </section>
             <section className="contact-section">
@@ -89,9 +89,7 @@ const Home = (props) => {
                         expect at the dinner table. 
                     </p>
                     </div>
-                    <StandardBtn className="info-btn">
-                        Contact Us!
-                    </StandardBtn>
+            
                 </div>
                 <div className="contact-form">
                     <div className="sub-heading">
