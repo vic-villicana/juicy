@@ -15,6 +15,20 @@
           "update"
         ]
       }
+    },
+    "/contactus": {
+      "name": "/contactus",
+      "lambdaFunction": "contactLambda",
+      "permissions": {
+        "setting": "protected",
+        "auth": [
+          "read",
+          "delete"
+        ],
+        "guest": [
+          "create"
+        ]
+      }
     }
   }
 }

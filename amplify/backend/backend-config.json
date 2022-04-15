@@ -8,6 +8,10 @@
       "service": "S3",
       "providerPlugin": "awscloudformation",
       "dependsOn": []
+    },
+    "contactTable": {
+      "service": "DynamoDB",
+      "providerPlugin": "awscloudformation"
     }
   },
   "function": {
@@ -19,6 +23,25 @@
         {
           "category": "storage",
           "resourceName": "juicyTable",
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "attributeEnvMap": {
+            "Name": "TABLE_NAME",
+            "Arn": "TABLE_ARN"
+          }
+        }
+      ]
+    },
+    "contactLambda": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "dependsOn": [
+        {
+          "category": "storage",
+          "resourceName": "contactTable",
           "attributes": [
             "Name",
             "Arn"
@@ -65,6 +88,14 @@
         {
           "category": "function",
           "resourceName": "promoLambda",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        },
+        {
+          "category": "function",
+          "resourceName": "contactLambda",
           "attributes": [
             "Name",
             "Arn"

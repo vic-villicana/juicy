@@ -11,10 +11,24 @@ export type AmplifyDependentResourcesAttributes = {
         "juiceamplifys3": {
             "BucketName": "string",
             "Region": "string"
+        },
+        "contactTable": {
+            "Name": "string",
+            "Arn": "string",
+            "StreamArn": "string",
+            "PartitionKeyName": "string",
+            "PartitionKeyType": "string",
+            "Region": "string"
         }
     },
     "function": {
         "promoLambda": {
+            "Name": "string",
+            "Arn": "string",
+            "Region": "string",
+            "LambdaExecutionRole": "string"
+        },
+        "contactLambda": {
             "Name": "string",
             "Arn": "string",
             "Region": "string",
