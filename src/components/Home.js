@@ -56,7 +56,7 @@ const Home = (props) => {
                 >
                     
                     <StanBtn >
-                        Book Event
+                        Catering
                     </StanBtn>
                 </Card>
                 <Card 
