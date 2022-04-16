@@ -71,7 +71,7 @@ class Form extends React.Component{
     // }
         
         onFormSubmit(event) {
-            const people = this.state.emailList
+            
             const person = this.state.fields
             event.preventDefault()
             
