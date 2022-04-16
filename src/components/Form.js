@@ -76,16 +76,14 @@ class Form extends React.Component{
             event.preventDefault()
             
             if (this.validate()) return 
-            //call your api here and persist the state if the request succeeds
-            this.props.promo(person)
+            const persona = {
+                email:this.state.fields.email,
+                name:this.state.fields.name
+                
+            }
+            this.props.promo(persona)
             
-            // this.setState({
-            //     people: people.concat(person),
-            //     fields:{
-            //         name: '',
-            //         email: ''
-            //     }
-            // })
+        
             
         }
 
