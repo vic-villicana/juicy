@@ -28,23 +28,41 @@ class App extends React.Component {
     this.changeQuantity = this.changeQuantity.bind(this)
     this.sendToCart = this.sendToCart.bind(this)
     this.formPromo = this.formPromo.bind(this)
+    this.formContact = this.formContact.bind(this)
   }
 
-  formPromo(init){
-    const apiName = 'juiceApi'; // replace this with your api name.
+  formPromo({email, name}){
+    const apiName = 'juiceApi';
     const path = '/promos'
     const myInit = {
-      body:{init}
+      body:{email, name}
     }
-    API.post(apiName, path, myInit).then(res => {
+    API.post(apiName, path, myInit)
+    .then(res => {
       return res.data
     })
     .catch(err => {
-      console.log(err.response)
+      throw new Error(err.response)
     })
    
   }
   
+  formContact({id, name, email, content}){
+    const apiName = 'juiceApi'
+    const path = 'contactus'
+    const myInit = {
+      body:{id, name, content, email}
+    }
+    
+    API.post(apiName, path, myInit)
+    .then(res => {
+      return res.data
+    })
+    .catch(err => {
+      console.log(err)
+    })
+  }
+
   handleClick(menuId){
     // this.setState({menu:menuId})
     this.props.selectMenu(menuId)
@@ -92,6 +110,9 @@ class App extends React.Component {
     return(
       <div>
         <Ddown />
+        <Router path='/'>
+          <Home promoSub={this.formPromo} />
+        </Router>
         <Router path='/order' >
           <DashboardMenu handleClick={this.handleClick} />
         </Router>
@@ -104,11 +125,8 @@ class App extends React.Component {
         <Router path="/cart">
           <Cart items={this.state.cart} />
         </Router>
-        <Router path='/'>
-          <Home promoSub={this.formPromo} />
-        </Router>
         <Router path='/contact'>
-          <ContactForm  />
+          <ContactForm contactSub={this.formContact} />
         </Router>
         <Footer/>
       </div>

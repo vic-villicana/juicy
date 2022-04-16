@@ -15,15 +15,31 @@ class ContactForm extends React.Component{
             }
         }
         this.onInputChange = this.onInputChange.bind(this)
-        this.onSubmision = this.onSubmission.bind(this)
+        this.onSubmission = this.onSubmission.bind(this)
     }
 
-    onInputChange(){
+    onInputChange(event){
+        const field = event.target.name
+        const val = event.target.value
+        const formField = Object.assign({}, this.state.formField)
+        formField[field] = val
+        this.setState({formField})
 
+        
     }
 
-    onSubmission(){
-
+    onSubmission(e){
+        e.preventDefault()
+        console.log(this)
+        //pass in form data to api prop function
+        const formData = {
+            id:Date.now(),
+            name:this.state.formField.name,
+            email:this.state.formField.email,
+            content:this.state.formField.content
+        }
+        this.props.contactSub(formData)
+        //timestamp id should be created here 
     }
 
     render(){
@@ -49,7 +65,7 @@ class ContactForm extends React.Component{
                         <h2>bringing the party <br/> to you!</h2>
                     </div>
                     <div className="form-section contact-us info-container">
-                        <form >
+                        <form onSubmit={this.onSubmission}>
                             <input 
                                 type={"text"}
                                 placeholder="Full Name"
