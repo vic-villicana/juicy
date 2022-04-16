@@ -77,8 +77,8 @@ class Form extends React.Component{
             
             if (this.validate()) return 
             const persona = {
-                email:this.state.fields.email,
-                name:this.state.fields.name
+                email:person.email,
+                name:person.name
                 
             }
             this.props.promo(persona)
