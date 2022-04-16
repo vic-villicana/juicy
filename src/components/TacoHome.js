@@ -11,8 +11,8 @@ const TacoHome = (props) => {
                 <StanBtn href="/order">
                     Order Now
                 </StanBtn>
-                <StanBtn>
-                    Catering
+                <StanBtn href="/contact">
+                    Book Event
                 </StanBtn>
             </div>
         </div>
