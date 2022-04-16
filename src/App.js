@@ -49,7 +49,7 @@ class App extends React.Component {
   
   formContact({id, name, email, content}){
     const apiName = 'juiceApi'
-    const path = 'contactus'
+    const path = '/contactus'
     const myInit = {
       body:{id, name, content, email}
     }
