@@ -51,7 +51,10 @@ class App extends React.Component {
     const apiName = 'juiceApi'
     const path = '/contactus'
     const myInit = {
-      body:{id, name, content, email}
+      body:{id, name, content, email},
+      headers:{
+        "Content-Type": "application/json"
+      }
     }
     
     API.post(apiName, path, myInit)
