@@ -33,7 +33,7 @@ class ContactForm extends React.Component{
         console.log(this)
         //pass in form data to api prop function
         const formData = {
-            id:Date.now(),
+            id:Date.now().toString(),
             name:this.state.formField.name,
             email:this.state.formField.email,
             content:this.state.formField.content
