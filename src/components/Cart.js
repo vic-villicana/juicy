@@ -45,22 +45,32 @@ const Cart = (props) => {
        setTimeModal(false)
    }
 
-   //modal functions for cart state
+   const calculateTotal = () => {
+       let cartTotal = 0
+       const cartItems = props.items
+       for(let key of cartItems ){
+           cartTotal += (key.price * key.quantity)
+       }
+       return cartTotal
+   }
 
-   const getCartState = (cart) => {
-        // const contents = cart.map(item => {
-        //     return <div className="cartItem">{item.dish} x{item.quantity} - ${item.price}.55</div>
-        // })
-        console.log(props)
-        console.log(cart[0])
-       return (
-        <div>
-            <ul>
-                
-                
-            </ul>
-        </div>
-       )
+   const getCartState = () => {
+       
+        const items = props.items
+        console.log(props.items)
+        
+        return items.map((item) => {
+            return (
+                <React.Fragment>
+                    <li className='cart-items'>
+                        <div className='cart-title'>{item.dish}</div>
+                        <div>{item.quantity}</div>
+                        <div>${item.price}</div>
+                    </li>
+                </React.Fragment>
+           )
+        })
+        
    }
     
     return(
@@ -80,14 +90,17 @@ const Cart = (props) => {
                 <ModalBtn modalOpen={openTimeModal}>When: {pickUpTime}</ModalBtn>
 
                 <div className="backToMenu">
-                    <button className="back-to-menu" ><a href="/">Add More Items</a></button>
+                    <button className="back-to-menu" ><a href="/order">Add More Items</a></button>
                 </div>
 
                 <div className="item-cart details">
-                    Items: {getCartState(props.items)}
+                    Items: <ul>
+                        {getCartState()}
+                    </ul>
+                    
                 </div>
                 <div className="details cartTotal">
-                    Total: {props.items.price}
+                    Total: ${calculateTotal()}
                 </div>
                 
                 <button className="add-btn cart-btn"><a href="/dashboard">Checkout</a></button>                    
