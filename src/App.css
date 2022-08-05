@@ -236,7 +236,7 @@
     padding:.5em 1em .5em 1em;
     margin:0 .5em 0 .5em;
     flex-shrink: 0;
-    color:antiquewhite;
+    color:white;
   }
 
   .menu-list{
@@ -244,7 +244,10 @@
   }
 
   .selected{
-    background:#1cdd73
+    background:#1cdd73c0;
+    background-image:Linear-gradient(#1cdd73f0,#1cdd73da),url(/src/imgs/aztec.webp);
+    background-size:cover;
+    background-position:center;
   }
   /*---Menu---*/
   /*---Menu---*/
