@@ -65,6 +65,7 @@ class MenuList extends React.Component{
             // console.log(option.img)
             <MenuTile bgImg={option.img} href='/menu' key={option.id} id={option.id} title={option.menu} onClick={this.clickIt} />
         ))
+        
         return (            
             <div className='menu-container'>
                 {tiles}

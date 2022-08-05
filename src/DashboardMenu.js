@@ -1,6 +1,6 @@
 import React from 'react'
-import MenuList from './MenuList'
-import TodaysLocation from './TodaysLocation'
+import NewMenu from './components/NewMenu'
+import LocationPicker from './components/LocationPicker'
 import TacoHeader from './components/TacoHeader'
 import sign from './imgs/sign.jpg'
 
@@ -14,8 +14,8 @@ class DashboardMenu extends React.Component {
             return (
                 <div className="back-print" >
                     <TacoHeader sign={sign} />
-                    <TodaysLocation />
-                    <MenuList handleClick={this.props.handleClick} />
+                    <LocationPicker />
+                    <NewMenu handleClick={this.props.handleClick} />
                 </div>                
             )
             

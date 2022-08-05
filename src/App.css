@@ -148,6 +148,7 @@
     flex-direction: column;
     justify-content: space-around;
     padding-left: 1em;
+    max-width: 250px;
   }
   .menu-title{
     font-weight: bold;
@@ -180,7 +181,7 @@
     height:81px;
     width:auto;
     border-radius: 9px;
-    margin:0 1em 2.5em;
+    margin:0 1em 2em;
     box-shadow:0px 4px 6px rgb(65, 65, 65, 0.568);
     background-size:cover;
     background-position:center;
@@ -218,6 +219,33 @@
     justify-content:center;
   }
 
+  .menu-option-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    padding:1em 0;
+
+  }
+
+  .menu-options{
+    width:auto;
+    background:red;
+    border:none;
+    border-radius:9px;
+    padding:.5em 1em .5em 1em;
+    margin:0 .5em 0 .5em;
+    flex-shrink: 0;
+    color:antiquewhite;
+  }
+
+  .menu-list{
+    padding:2em 1em 0 1em;
+  }
+
+  .selected{
+    background:#1cdd73
+  }
   /*---Menu---*/
   /*---Menu---*/
   .menu{
@@ -262,7 +290,7 @@
     flex-direction: row;
     margin-bottom:2.25em;
     padding-bottom:1em;
-    border-bottom:2px dashed #e72b2b
+    border-bottom:1px solid #e72b2b
   }
 
   .menu-pic{

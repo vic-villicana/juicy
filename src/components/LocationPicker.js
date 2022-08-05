@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
-import Modal from './components/Modal'
-import sugar from './imgs/sugarskullwhite.jpg'
+import Modal from './Modal'
+import sugar from '../imgs/sugarskullwhite.jpg'
 
     const city = [
         'Pacoima, CA', 

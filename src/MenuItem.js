@@ -17,7 +17,7 @@ class MenuItem extends React.Component {
                     <h2 className='menu-item-title'> {this.props.theItem.dish}</h2>
                     <h4 className='menu-item-price'> ${this.props.theItem.price}.00 ea.</h4> 
                     <p className='menu-paragraph'>
-                        {this.props.theItem.desc}
+                        {this.props.theItem.description}
                     </p>
                     {/* pass the props.theItem.quantity in as props */}
                     <QuantityCounter quantity={this.props.theItem.quantity} changeQuantity={this.props.changeQuantity} />                    

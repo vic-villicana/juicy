@@ -19,6 +19,7 @@ class MenuItems extends React.Component {
                 <div className='menu-pic' style={{backgroundImage:`url(${this.props.imgs})`}}></div>
                 <div className='simple-flex'>
                     <div className='menu-title'>{this.props.dish}<br/></div>
+                    <p>{this.props.description}</p>
                     <div className='menu-price'>${this.props.price}.00</div>
                 </div>
             </div>

@@ -70,6 +70,7 @@ class App extends React.Component {
   }
 
   handleItemClick(item){
+    console.log(item)
     this.setState({item:item})
     
   }
@@ -114,7 +115,7 @@ class App extends React.Component {
           <Home promoSub={this.formPromo} />
         </Router>
         <Router path='/order' >
-          <DashboardMenu handleClick={this.handleClick} />
+          <DashboardMenu handleClick={this.handleItemClick} />
         </Router>
         <Router path='/menu'>
           <Menu handleItemClick={this.handleItemClick} menuId={this.props.menuId} />
