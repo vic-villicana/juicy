@@ -149,6 +149,7 @@
     justify-content: space-around;
     padding-left: 1em;
     max-width: 250px;
+    color: rgba(0,0,0,.87);
   }
   .menu-title{
     font-weight: bold;

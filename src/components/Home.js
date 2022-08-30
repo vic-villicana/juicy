@@ -31,7 +31,7 @@ const Home = (props) => {
                         our own meal prep service!
                     </p>
                 </div>
-                <StanBtn className="info-btn">
+                <StanBtn className="info-btn" href="/contact">
                     Book Event
                 </StanBtn>
             </section>
@@ -55,7 +55,7 @@ const Home = (props) => {
                     img={mexitable}
                 >
                     
-                    <StanBtn >
+                    <StanBtn href="/contact">
                         Catering
                     </StanBtn>
                 </Card>

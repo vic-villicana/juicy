@@ -4,9 +4,8 @@ import LocationPicker from './components/LocationPicker'
 import TacoHeader from './components/TacoHeader'
 import sign from './imgs/sign.jpg'
 
-import Cart from './components/Cart'
 
-//we will leave the state for the todayslocation component out for the portfolio project version
+
 class DashboardMenu extends React.Component {
     
         render(){
@@ -18,9 +17,6 @@ class DashboardMenu extends React.Component {
                     <NewMenu handleClick={this.props.handleClick} />
                 </div>                
             )
-            
-        
-    
     }
 }
 

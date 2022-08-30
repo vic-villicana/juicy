@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 // import itemTile from './itemTiles'
 
 //so far i added an item id to ALL food items and passed it down from Menu component as props to this component
@@ -15,13 +16,16 @@ class MenuItems extends React.Component {
     render(){
         return (
             //component does not need an add button attach event listener on parent element
-            <div  className='menu-items' onClick={this.itemChoosen}>
-                <div className='menu-pic' style={{backgroundImage:`url(${this.props.imgs})`}}></div>
-                <div className='simple-flex'>
-                    <div className='menu-title'>{this.props.dish}<br/></div>
-                    <p>{this.props.description}</p>
-                    <div className='menu-price'>${this.props.price}.00</div>
-                </div>
+            <div onClick={this.itemChoosen}>
+                <Link to='/item' className='menu-items'>
+                    <div className='menu-pic' style={{backgroundImage:`url(${this.props.imgs})`}}></div>
+                    <div className='simple-flex'>
+                        <div className='menu-title'>{this.props.dish}<br/></div>
+                        <p>{this.props.description}</p>
+                        <div className='menu-price'>${this.props.price}.00</div>
+                    </div>
+                </Link>                    
+              
             </div>
         )
     }

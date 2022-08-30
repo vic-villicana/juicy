@@ -1,15 +1,18 @@
 
 import './App.css';
 import React from 'react'
+
 import DashboardMenu from './DashboardMenu';
 import MenuItem from './MenuItem'
-import Menu from './Menu'
-import Router from './components/Route'
 import Cart from './components/Cart'
 import Home from './components/Home'
-import Ddown from './components/Ddown';
-import Footer from './components/Footer.js'
+// import Ddown from './components/Ddown';
+// import Footer from './components/Footer.js'
 import ContactForm from './components/ContactForm.js'
+
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+
+// import Router from './components/Route'
 
 import {connect} from 'react-redux'
 import {selectMenu} from './actions'
@@ -23,7 +26,6 @@ class App extends React.Component {
   constructor(props){
     super(props)
     this.state = {item:{}, cart:[]}
-    this.handleClick = this.handleClick.bind(this)
     this.handleItemClick = this.handleItemClick.bind(this)
     this.changeQuantity = this.changeQuantity.bind(this)
     this.sendToCart = this.sendToCart.bind(this)
@@ -63,11 +65,6 @@ class App extends React.Component {
     })
   }
 
-  handleClick(menuId){
-    // this.setState({menu:menuId})
-    this.props.selectMenu(menuId)
-    console.log(menuId)
-  }
 
   handleItemClick(item){
     console.log(item)
@@ -109,28 +106,17 @@ class App extends React.Component {
   render(){
     console.log(this.state)
     return(
-      <div>
-        <Ddown />
-        <Router path='/'>
-          <Home promoSub={this.formPromo} />
-        </Router>
-        <Router path='/order' >
-          <DashboardMenu handleClick={this.handleItemClick} />
-        </Router>
-        <Router path='/menu'>
-          <Menu handleItemClick={this.handleItemClick} menuId={this.props.menuId} />
-        </Router>
-        <Router path='/item'>
-          <MenuItem theItem={this.state.item} changeQuantity={this.changeQuantity} sendToCart={this.sendToCart} />
-        </Router>
-        <Router path="/cart">
-          <Cart items={this.state.cart} />
-        </Router>
-        <Router path='/contact'>
-          <ContactForm contactSub={this.formContact} />
-        </Router>
-        <Footer/>
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home promoSub={this.formPromo} />}/>
+          <Route path="order" element={<DashboardMenu handleClick={this.handleItemClick} />}/>
+          <Route path="item" element={<MenuItem theItem={this.state.item} changeQuantity={this.changeQuantity} sendToCart={this.sendToCart} />} />
+          <Route path="cart" element={<Cart items={this.state.cart} />} />
+          <Route path="contact" element={<ContactForm contactSub={this.formcontact} />} />
+        </Routes> 
+      </BrowserRouter>
+
+
     )
     
   }
@@ -144,19 +130,3 @@ const mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps, {selectMenu})(App);
-
-// if(this.state.isMenuOpen === false && this.state.isItemOpen === false){
-
-//   return <DashboardMenu handleClick={this.handleClick} />
-    
-  
-// }else if(this.state.isMenuOpen === true){
-
-//   return <Menu handleItemClick={this.handleItemClick} menuId={this.state.menu} />
-
-  
-// }else if(this.state.isItemOpen === true){
-
-//   return <MenuItem theItem={this.state.item} changeQuantity={this.changeQuantity} sendToCart={this.toCart} />
-// }
-  

@@ -817,7 +817,6 @@ const NewMenu = (props) => {
     }
 
     const selectItem = (item, href) => {
-        window.history.pushState({}, '', href)
         props.handleClick(item)
     }
 

@@ -1,9 +1,10 @@
-import Link from '../Link'
+import {Link} from 'react-router-dom'
 
 const StanBtn = ({className, href, children}) => {
+    
     return (
         <button className={`standard-btn ${className}`} >
-           <Link href={href}>{children}</Link>
+           <Link to={href}> {children} </Link>
         </button>
     )
 }
