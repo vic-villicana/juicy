@@ -6,7 +6,7 @@ import DashboardMenu from './DashboardMenu';
 import MenuItem from './MenuItem'
 import Cart from './components/Cart'
 import Home from './components/Home'
-// import Ddown from './components/Ddown';
+import Navbar from './components/Ddown';
 // import Footer from './components/Footer.js'
 import ContactForm from './components/ContactForm.js'
 
@@ -107,6 +107,7 @@ class App extends React.Component {
     console.log(this.state)
     return(
       <BrowserRouter>
+      <Navbar />
         <Routes>
           <Route path="/" element={<Home promoSub={this.formPromo} />}/>
           <Route path="order" element={<DashboardMenu handleClick={this.handleItemClick} />}/>

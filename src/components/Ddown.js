@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import Link from '../Link'
+import {Link} from 'react-router-dom'
 import {ReactComponent as TacoLogo} from '../imgs/mexican-hat.svg'
 
 const Ddown = () => {
@@ -9,10 +9,6 @@ const Ddown = () => {
         {
             linkText:'home',
             href:'/'
-        },
-        {
-            linkText:'menu',
-            href:'/menu'
         },
         {
             linkText:'order',
@@ -42,9 +38,12 @@ const Ddown = () => {
 
     const theLink = links.map(( link, index) => {
         return (
-            <Link href={link.href} func={unDrop} >
-                {link.linkText}
-            </Link>
+            <div onClick={unDrop} >
+                <Link to={link.href} >
+                    {link.linkText}
+                </Link>
+            </div>
+
         )
         // return <li key={index}><a href={link.href}>{link.linkText}</a></li>
     })        
