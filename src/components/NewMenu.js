@@ -823,7 +823,7 @@ const NewMenu = (props) => {
     const menu = menuItems.map(item => {
         if(item.menuId === selected){
             return(
-                <MenuItems onClick={selectItem} href={"/item"} quantity={item.quantity} imgs={item.img} key={item.menuItemId} dish={item.dish} price={item.price} description={item.description}/>
+                <MenuItems onClick={selectItem} href={`/order/${item.menuItemId}`} quantity={item.quantity} imgs={item.img} key={item.menuItemId} dish={item.dish} price={item.price} description={item.description}/>
             )
         }
         

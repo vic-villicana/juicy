@@ -17,7 +17,7 @@ class MenuItems extends React.Component {
         return (
             //component does not need an add button attach event listener on parent element
             <div onClick={this.itemChoosen}>
-                <Link to='/item' className='menu-items'>
+                <Link to={this.props.href} className='menu-items'>
                     <div className='menu-pic' style={{backgroundImage:`url(${this.props.imgs})`}}></div>
                     <div className='simple-flex'>
                         <div className='menu-title'>{this.props.dish}<br/></div>
