@@ -15,12 +15,12 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 // import Router from './components/Route'
 
 import {connect} from 'react-redux'
-import {selectMenu} from './actions'
+// import {selectMenu} from './actions'
 
-import {Amplify, API} from 'aws-amplify'
-import awsConfig from './aws-exports'
+// import {Amplify, API} from 'aws-amplify'
+// import awsConfig from './aws-exports'
 
-Amplify.configure(awsConfig)
+// Amplify.configure(awsConfig)
 
 class App extends React.Component {
   constructor(props){
@@ -29,41 +29,41 @@ class App extends React.Component {
     this.handleItemClick = this.handleItemClick.bind(this)
     this.changeQuantity = this.changeQuantity.bind(this)
     this.sendToCart = this.sendToCart.bind(this)
-    this.formPromo = this.formPromo.bind(this)
-    this.formContact = this.formContact.bind(this)
+    // this.formPromo = this.formPromo.bind(this)
+    // this.formContact = this.formContact.bind(this)
   }
 
-  formPromo({email, name}){
-    const apiName = 'juiceApi';
-    const path = '/promos'
-    const myInit = {
-      body:{email, name}
-    }
-    API.post(apiName, path, myInit)
-    .then(res => {
-      return res.data
-    })
-    .catch(err => {
-      throw new Error(err.response)
-    })
+  // formPromo({email, name}){
+  //   const apiName = 'juiceApi';
+  //   const path = '/promos'
+  //   const myInit = {
+  //     body:{email, name}
+  //   }
+  //   API.post(apiName, path, myInit)
+  //   .then(res => {
+  //     return res.data
+  //   })
+  //   .catch(err => {
+  //     throw new Error(err.response)
+  //   })
    
-  }
+  // }
   
-  formContact({id, name, email, content}){
-    const apiName = 'juiceApi'
-    const path = '/contactus'
-    const myInit = {
-      body:{id, name, content, email},
-    }
+  // formContact({id, name, email, content}){
+  //   const apiName = 'juiceApi'
+  //   const path = '/contactus'
+  //   const myInit = {
+  //     body:{id, name, content, email},
+  //   }
     
-    API.post(apiName, path, myInit)
-    .then(res => {
-      return res.data
-    })
-    .catch(err => {
-      console.log(err)
-    })
-  }
+  //   API.post(apiName, path, myInit)
+  //   .then(res => {
+  //     return res.data
+  //   })
+  //   .catch(err => {
+  //     console.log(err)
+  //   })
+  // }
 
 
   handleItemClick(item){
@@ -123,11 +123,11 @@ class App extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  console.log(state)
-  return{
-    menuId: state.menus
-  }
-}
+// const mapStateToProps = (state) => {
+//   console.log(state)
+//   return{
+//     menuId: state.menus
+//   }
+// }
 
-export default connect(mapStateToProps, {selectMenu})(App);
+export default App

@@ -1,6 +1,6 @@
 const menuReducer =  (state = [], action) => {
     switch (action.type) {
-        case 'MENU_SELECTED':
+        case 'FETCH_MENU':
             return action.payload;
         default:
             return state

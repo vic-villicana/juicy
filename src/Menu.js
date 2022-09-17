@@ -7,7 +7,7 @@ import tinga from './imgs/tinga.jpg'
 import mole from './imgs/mole.jpg'
 import huaraches from './imgs/huaraches.jpg'
 //import connect funciton
-import {connect} from 'react-redux'
+// import {connect} from 'react-redux'
 const menuItems = [
     {
         menuId:0,
