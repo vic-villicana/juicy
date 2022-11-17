@@ -44,11 +44,13 @@ class ContactForm extends React.Component{
 
     render(){
         return(
-            <div>
+      
                 <section className="intro" style={{backgroundImage:`linear-gradient(rgba(255, 218, 224, 0.863), rgba(2255, 218, 224, 0.863)), url(${pattern})`}}>
                     
                     <div className="info-p">
+                    <div className="info-pic" style={{backgroundImage: `linear-gradient(rgb(65, 65, 65, 0.568), rgb(65, 65, 65, 0.268)), url(${mexicanTable})`}}>
                         <h2 className="title">More Than Just Food</h2>
+                    </div>
                         <p>
                             Since 2011 Juicy Juize Tacos has 
                             been on a mission to provide
@@ -56,15 +58,14 @@ class ContactForm extends React.Component{
                             authentic Mexican food but 
                             also the hospitality you can 
                             expect at the dinner table. 
-                            Which is why weare proud to 
-                            announce that we are starting
-                            our own meal prep service!
+                            If you have any questions about 
+                            our service feel free to contact us!
                         </p>
                     </div>
-                    <div className="info-pic" style={{backgroundImage: `linear-gradient(rgb(65, 65, 65, 0.568), rgb(65, 65, 65, 0.268)), url(${mexicanTable})`}}>
-                        <h2>bringing the party <br/> to you!</h2>
-                    </div>
+
                     <div className="form-section contact-us info-container">
+                        <h2>Contact Us</h2>
+                        <p>We're Always Ready to Help!</p>
                         <form onSubmit={this.onSubmission}>
                             <input 
                                 type={"text"}
@@ -94,7 +95,7 @@ class ContactForm extends React.Component{
                     </div>
                 </section>
                 
-            </div>
+
         )
     }
 }

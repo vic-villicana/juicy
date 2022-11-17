@@ -9,7 +9,7 @@ import sugar from '../imgs/sugarskullwhite.jpg'
         'Hollywood, CA'
     ]
 
-const TodaysLocation = () => {
+const LocationPicker = () => {
 
     const [modalActive, setModalActive] = useState(false)
     const [selectedCity, setSelectedCity] = useState('select location')
@@ -53,4 +53,4 @@ const TodaysLocation = () => {
     )
 }
 
-export default TodaysLocation
+export default LocationPicker

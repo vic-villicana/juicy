@@ -6,15 +6,17 @@ import sign from './imgs/sign.jpg'
 
 
 
+
+
 class DashboardMenu extends React.Component {
     
         render(){
                     
             return (
-                <div className="back-print" >
+                <div  >
                     <TacoHeader sign={sign} />
                     <LocationPicker />
-                    <NewMenu handleClick={this.props.handleClick} />
+                    <NewMenu handleClick={this.props.handleClick}  />
                 </div>                
             )
     }

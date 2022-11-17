@@ -11,6 +11,7 @@ import enchiladas from '../imgs/enchiladas.jpg'
 import tinga from '../imgs/tinga.jpg'
 import mole from '../imgs/mole.jpg'
 import huaraches from '../imgs/huaraches.jpg'
+import pattern from '../imgs/pattern.jpg'
 //Menu redesign 
 
 //onClick handler for selecting menu
@@ -70,14 +71,14 @@ const NewMenu = (props) => {
     console.log(props.menu)
 
     return (
-        
-        <>
+        // style={{backgroundImage:`linear-gradient(rgba(255, 218, 224, 0.963), rgba(2255, 218, 224, 0.953)), url(${pattern})`}}
+        <div className="back-print" >
          <MenuBtns menuOptions={menuOptions} menuClick={clickedMenu} selected={selected}/>
          <div className="menu-list">
          
              {menu}
          </div>
-        </>
+        </div>
     )
 }
 
