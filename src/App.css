@@ -1090,4 +1090,10 @@
     height:81px;
   }
 
+  @media(min-Width:1400px){
+    body{
+      max-width:1600px;
+    }
+  }
+
 }

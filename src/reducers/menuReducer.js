@@ -1,5 +1,5 @@
-const menuReducer =  (state = [], action) => {
-    switch (action.type) {
+const menuReducer = (state = [], action) => {
+    switch(action.type) {
         case 'FETCH_MENU':
             return action.payload;
         default:

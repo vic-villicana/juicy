@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react'
 import { connect } from 'react-redux'
 import {fetchMenu} from '../actions'
+import {setItem} from '../actions'
 //components
 import MenuBtns from "./MenuBtns"
 //images
@@ -58,6 +59,7 @@ const NewMenu = (props) => {
 
     const selectItem = (item, href) => {
         props.handleClick(item)
+        props.setItem(item)
     }
 
     const menu = menuItems.map(item => {
@@ -83,7 +85,10 @@ const NewMenu = (props) => {
 }
 
 const mapStateToProps = (state) => {
-    return {menu: state.menu}
+    return {
+        menu: state.menu,
+        item: state.item
+    }
 }
 
-export default connect(mapStateToProps, {fetchMenu})(NewMenu)
+export default connect(mapStateToProps, {fetchMenu, setItem})(NewMenu)

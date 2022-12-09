@@ -14,7 +14,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 // import Router from './components/Route'
 
-import {connect} from 'react-redux'
+// import {connect} from 'react-redux'
 // import {selectMenu} from './actions'
 
 // import {Amplify, API} from 'aws-amplify'

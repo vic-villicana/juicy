@@ -1,11 +1,12 @@
 import React from 'react'
 
 class QuantityCounter extends React.Component {
-    
+
+
   onbuttonClick = (event) => {
       const btn = event.target.parentElement
       
-    //   console.log(this.props)
+      console.log(this.props)
       this.props.changeQuantity(btn)
     console.log(typeof btn.value)
     console.log(btn)
