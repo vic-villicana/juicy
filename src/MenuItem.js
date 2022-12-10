@@ -41,7 +41,7 @@ const MenuItem = (props) => {
                         {menuItem.description}
                     </p>
                     {/* pass the props.quantity in as props */}
-                    <QuantityCounter quantity={props.theItem.quantity} changeQuantity={props.changeQuantity} />                    
+                    <QuantityCounter quantity={menuItem.quantity}  />                    
                 </div>
                 <Substitutions />
                 <AddButton item={menuItem} sendToCart={menuItem.sendToCart} />

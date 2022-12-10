@@ -58,7 +58,7 @@ const NewMenu = (props) => {
     }
 
     const selectItem = (item, href) => {
-        props.handleClick(item)
+   
         props.setItem(item)
     }
 

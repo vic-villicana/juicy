@@ -6,9 +6,16 @@ export const setItem = (state) => async dispatch => {
 }
 
 export const fetchMenu = () => async dispatch => {
-        const response = await juicer.get('/menuitems')
+    const response = await juicer.get('/menuitems')
+    dispatch({type:'FETCH_MENU', payload:response.data.data})
+}
 
-        dispatch({type:'FETCH_MENU', payload:response.data.data})
+export const increment = (state) => async dispatch => {
+    dispatch({type:'INCREMENT_ACTION', payload: state})
+}
+
+export const decrement = (state) =>  async dispatch => {
+    dispatch({type:'DECREMENT_ACTION', payload: state})
 }
 
 

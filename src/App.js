@@ -14,8 +14,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 // import Router from './components/Route'
 
-// import {connect} from 'react-redux'
-// import {selectMenu} from './actions'
+
 
 // import {Amplify, API} from 'aws-amplify'
 // import awsConfig from './aws-exports'
@@ -25,9 +24,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 class App extends React.Component {
   constructor(props){
     super(props)
-    this.state = {item:{}, cart:[]}
-    this.handleItemClick = this.handleItemClick.bind(this)
-    this.changeQuantity = this.changeQuantity.bind(this)
+    this.state = {cart:[]}
     this.sendToCart = this.sendToCart.bind(this)
     // this.formPromo = this.formPromo.bind(this)
     // this.formContact = this.formContact.bind(this)
@@ -66,29 +63,6 @@ class App extends React.Component {
   // }
 
 
-  handleItemClick(item){
-    console.log(item)
-    this.setState({item:item})
-    
-  }
-  
-  changeQuantity(quan){
-    const name = quan.name
-    const value = quan.value
-    const newItem = Object.assign({}, this.state.item)
-    const quantity = this.state.item.quantity    
-
-    console.log(value)
-    if(value){
-      newItem[name] = quantity + 1
-    }else if(!value && quantity > 1){
-      newItem[name] = quantity - 1
-    }
-
-    this.setState({item:newItem})
-    
-  }
-
   sendToCart({dish, price, quantity}){
     const newDish = {
       dish:dish,
@@ -110,8 +84,8 @@ class App extends React.Component {
       <Navbar />
         <Routes>
           <Route path="/" element={<Home promoSub={this.formPromo} />}/>
-          <Route path="order" element={<DashboardMenu handleClick={this.handleItemClick} />}/>
-          <Route path="order/:item" element={<MenuItem theItem={this.state.item} changeQuantity={this.changeQuantity} sendToCart={this.sendToCart} />} />
+          <Route path="order" element={<DashboardMenu />}/>
+          <Route path="order/:item" element={<MenuItem sendToCart={this.sendToCart} />} />
           <Route path="cart" element={<Cart items={this.state.cart} />} />
           <Route path="contact" element={<ContactForm contactSub={this.formcontact} />} />
         </Routes> 
@@ -122,12 +96,5 @@ class App extends React.Component {
     
   }
 }
-
-// const mapStateToProps = (state) => {
-//   console.log(state)
-//   return{
-//     menuId: state.menus
-//   }
-// }
 
 export default App
