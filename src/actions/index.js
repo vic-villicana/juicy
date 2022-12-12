@@ -1,13 +1,13 @@
 import juicer from '../api/juicer'
 
-
-export const setItem = (state) => async dispatch => {
-    dispatch({type:'SET_ITEM', payload:state})
-}
-
+//menu action
 export const fetchMenu = () => async dispatch => {
     const response = await juicer.get('/menuitems')
     dispatch({type:'FETCH_MENU', payload:response.data.data})
+}
+//item action
+export const setItem = (state) => async dispatch => {
+    dispatch({type:'SET_ITEM', payload:state})
 }
 
 export const increment = (state) => async dispatch => {
@@ -16,6 +16,13 @@ export const increment = (state) => async dispatch => {
 
 export const decrement = (state) =>  async dispatch => {
     dispatch({type:'DECREMENT_ACTION', payload: state})
+}
+
+//cart action
+
+export const addToCart = (state) => async dispatch => {
+    dispatch({type: 'ADD_TO_CART', payload:state})
+
 }
 
 

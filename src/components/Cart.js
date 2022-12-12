@@ -2,6 +2,9 @@ import React, {useState} from 'react'
 import ModalBtn from './ModalBtn'
 import Modal from './Modal'
 import pattern from '../imgs/pattern.jpg'
+import { connect } from 'react-redux'
+import StanBtn from './StanBtn'
+
 
 const Cart = (props) => {
  
@@ -56,8 +59,9 @@ const Cart = (props) => {
 
    const getCartState = () => {
        
-        const items = props.items
+        const items = props.cart
         console.log(props.items)
+        console.log(props.cart)
         
         return items.map((item) => {
             return (
@@ -90,7 +94,7 @@ const Cart = (props) => {
                 <ModalBtn modalOpen={openTimeModal}>When: {pickUpTime}</ModalBtn>
 
                 <div className="backToMenu">
-                    <button className="back-to-menu" ><a href="/order">Add More Items</a></button>
+                    <StanBtn className="back-to-menu" href="/order" >Add More Items</StanBtn>
                 </div>
 
                 <div className="item-cart details">
@@ -111,4 +115,10 @@ const Cart = (props) => {
     
 }
 
-export default Cart
+const mapStateToProps = (state) => {
+    return {
+        cart:state.cart
+    }
+}
+
+export default connect(mapStateToProps)(Cart)
