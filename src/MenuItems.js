@@ -1,34 +1,32 @@
-import React from 'react'
+import {React} from 'react'
 import {Link} from 'react-router-dom'
 // import itemTile from './itemTiles'
 
 //so far i added an item id to ALL food items and passed it down from Menu component as props to this component
-class MenuItems extends React.Component {
-    constructor(props) {
-        super(props)
-        this.itemChoosen = this.itemChoosen.bind(this)
+const MenuItems = (props) => {
+
+
+    const itemChoosen = () => {
+        props.onClick(props, props.href)
     }
 
-    itemChoosen(){
-        this.props.onClick(this.props, this.props.href)
-        console.log(this.props)
-    }
-    render(){
+
         return (
             //component does not need an add button attach event listener on parent element
-            <div onClick={this.itemChoosen}>
-                <Link to={this.props.href} className='menu-items'>
-                    <div className='menu-pic' style={{backgroundImage:`url(${this.props.imgs})`}}></div>
+            <div onClick={itemChoosen}>
+                <Link to={props.href} className='menu-items'>
+                    <img alt="current food item" className='menu-pic' src={`https://juize.s3.us-west-2.amazonaws.com/${props.img}`}/>
+                    {/* <div className='menu-pic' style={{backgroundImage:`url(${props.imgs})`}}></div> */}
                     <div className='simple-flex'>
-                        <div className='menu-title'>{this.props.dish}<br/></div>
-                        <p>{this.props.description}</p>
-                        <div className='menu-price'>${this.props.price}.00</div>
+                        <div className='menu-title'>{props.dish}<br/></div>
+                        <p>{props.description}</p>
+                        <div className='menu-price'>${props.price}.00</div>
                     </div>
                 </Link>                    
               
             </div>
         )
-    }
+    
     
 }
 

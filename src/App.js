@@ -78,9 +78,9 @@ class App extends React.Component {
  
   
   render(){
-    console.log(this.state)
     return(
-      <BrowserRouter>
+     <BrowserRouter>
+
       <Navbar />
         <Routes>
           <Route path="/" element={<Home promoSub={this.formPromo} />}/>
@@ -89,8 +89,8 @@ class App extends React.Component {
           <Route path="cart" element={<Cart items={this.state.cart} />} />
           <Route path="contact" element={<ContactForm contactSub={this.formcontact} />} />
         </Routes> 
-      </BrowserRouter>
 
+    </BrowserRouter>
 
     )
     

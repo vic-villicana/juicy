@@ -170,7 +170,7 @@
   }
 
   .customer-message{
-    margin:4.5em 1.25em;
+    margin:5.5em 1.25em;
     display:flex;
     flex-direction:column-reverse;
   }
@@ -194,7 +194,9 @@
     height:225px;
     width:350px;
     margin:0 auto;
-    background:grey;
+    background-position:center;
+    background-size:cover;
+    border-radius:9px;
   }
 /*---MainDashboard---*/
 /*---MainDashboard---*/
@@ -497,7 +499,7 @@
     color:white;
   }
   .add-btn{
-    margin-bottom:2em;
+    margin-bottom:1.5em;
     padding:20px 38px;
     background:#e72b2b;
     border-radius: 11px;
@@ -513,6 +515,7 @@
     background-position: center;
     color: black;
     padding:2em 0;
+    height: 100vh;
   }
 
   .item-cart{
@@ -527,20 +530,36 @@
   .order-details{
     display:flex;
     max-width:300px;
-    margin: 0 auto;
+    margin: 5em auto;
     border-radius:11px;
     flex-direction:column;
     background:rgba(255, 245, 238, 0.842);
     /* background:rgba(90, 226, 56, 0.842); */
-    padding:0 1em;
+    padding:1em 1em;
   }
     
   .details{
-      text-align: left;
+
+    margin-top: 1em;
+    /* margin-bottom: 2em; */
+    border: none;
+    /* background: dodgerblue; */
+    /* color: white; */
+    padding: 0.2em 0 0.25em 0;
+
+      /* text-align: left;
       margin-top:1em;
+      margin-bottom:2em;
       border: none;
       background: none;
-      border-bottom:1px solid hsl(0, 80%, 54%)
+      border-bottom:1px solid hsl(0, 80%, 54%) */
+  }
+
+  .btn-style{
+    color:white;
+    background: rgb(54, 149, 244);
+    border-radius:9px;
+    padding: .25em 0 .30em 0;
   }
 
   .back-to-menu a{
@@ -563,6 +582,8 @@
     align-items: center;
     width:auto;
     margin-top:3em;
+    margin-bottom: 1.5em;
+
   }
 
   .cart-btn{
@@ -746,7 +767,7 @@
     display:flex;
     flex-direction:column;
     align-items: center;
-    margin:0 auto;
+    margin:0 auto 3em auto;
   }
 
   .card{
@@ -936,6 +957,9 @@
   .m-image{
     height:275px;
     width:450px;
+    background-position:center;
+    background-size:cover;
+    border-radius: 11px;
   }
 
   .info-p{

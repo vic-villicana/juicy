@@ -1,3 +1,5 @@
+import mexicanTable from "../imgs/mexicantable.jpg"
+
 const Message = () => {
     return(
         <section className="customer-message">
@@ -15,7 +17,7 @@ const Message = () => {
                 <p>sincerly,</p> 
                 <h3 className="signature">The Juicy Juice Team</h3>
             </div>
-            <div className="m-image" ></div>
+            <div className="m-image" style={{backgroundImage: `url(${mexicanTable})`}} ></div>
         </section>
     )
 }

@@ -11,7 +11,7 @@ const ModalBtn = ({modalOpen, children}) => {
 
         return(
            
-            <button onClick={modalOpen} className="details">{children}</button>
+            <button onClick={modalOpen} className="details btn-style">{children}</button>
            
         )
     

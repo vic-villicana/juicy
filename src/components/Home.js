@@ -16,6 +16,8 @@ const Home = (props) => {
         <div>
             <TacoHome />
             
+            <Message />
+
             <section className="cards" >
                 <div className="sub-heading">
                     <h2>A unique and authentic <br/> blend of flavors</h2>
@@ -52,7 +54,6 @@ const Home = (props) => {
                     </Card>
                 </div>
             </section>
-            <Message />
             {/* <section className="intro" style={{backgroundImage:`linear-gradient(rgba(143, 255, 193, 0.863), rgba(143, 255, 193, 0.863)), url(${pattern})`}}>
                 <div className="info-pic" style={{backgroundImage: `linear-gradient(rgb(65, 65, 65, 0.568), rgb(65, 65, 65, 0.268)), url(${mexicanTable})`}}>
                     <h2>bringing the party <br/> to you!</h2>

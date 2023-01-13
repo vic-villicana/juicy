@@ -79,7 +79,7 @@ const Cart = (props) => {
     
     return(
         <div className="Cart" style={{backgroundImage:`url(${pattern})`}} >
-            <h2>Cart</h2>
+      
             <div className="order-details">
                 <Modal handleClose={closeOrderModal} show={orderModal}>
                     {displayOptions("Takeout", "Delivery", "Curbside")}
