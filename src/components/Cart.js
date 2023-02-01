@@ -50,7 +50,7 @@ const Cart = (props) => {
 
    const calculateTotal = () => {
        let cartTotal = 0
-       const cartItems = props.items
+       const cartItems = props.cart
        for(let key of cartItems ){
            cartTotal += (key.price * key.quantity)
        }
@@ -67,8 +67,8 @@ const Cart = (props) => {
             return (
                 <React.Fragment>
                     <li className='cart-items'>
-                        <div className='cart-title'>{item.dish}</div>
-                        <div>{item.quantity}</div>
+                        <div className='cart-title'>{item.quantity}x {item.dish}</div>
+                        <div></div>
                         <div>${item.price}</div>
                     </li>
                 </React.Fragment>
@@ -98,13 +98,15 @@ const Cart = (props) => {
                 </div>
 
                 <div className="item-cart details">
-                    Items: <ul>
+                    <h3>Items:</h3> 
+                    <ul>
                         {getCartState()}
                     </ul>
                     
                 </div>
                 <div className="details cartTotal">
-                    Total: ${calculateTotal()}
+                    <h3>Total:</h3>
+                    ${calculateTotal()}
                 </div>
                 
                 <button className="add-btn cart-btn"><a href="/dashboard">Checkout</a></button>                    
