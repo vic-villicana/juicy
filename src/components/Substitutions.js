@@ -68,7 +68,6 @@ class Substitutions extends React.Component {
             <div className='substitutions-container'>
                 <div className='sub-heading'>
                     <h2>Substitutions</h2>
-                    <p>Substitute your current Selection with any of the sides below.</p>
                 </div>
                 <h5 className="chosen-heading">You have chosen:</h5>
                 <div className='sub-grid'>

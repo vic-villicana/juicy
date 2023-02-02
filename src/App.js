@@ -85,7 +85,7 @@ class App extends React.Component {
         <Routes>
           <Route path="/" element={<Home promoSub={this.formPromo} />}/>
           <Route path="order" element={<DashboardMenu />}/>
-          <Route path="order/:item" element={<MenuItem sendToCart={this.sendToCart} />} />
+          {/* <Route path="order/:item" element={<MenuItem sendToCart={this.sendToCart} />} /> */}
           <Route path="cart" element={<Cart items={this.state.cart} />} />
           <Route path="contact" element={<ContactForm contactSub={this.formcontact} />} />
         </Routes> 

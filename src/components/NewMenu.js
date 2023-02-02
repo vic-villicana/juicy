@@ -4,16 +4,8 @@ import {fetchMenu} from '../actions'
 import {setItem} from '../actions'
 //components
 import MenuBtns from "./MenuBtns"
-//images
+import ItemModal from "./ItemModal"
 import MenuItems from '../MenuItems'
-import taco from '../imgs/tacos.jpg'
-import burry from '../imgs/burry.jpg'
-import enchiladas from '../imgs/enchiladas.jpg'
-import tinga from '../imgs/tinga.jpg'
-import mole from '../imgs/mole.jpg'
-import huaraches from '../imgs/huaraches.jpg'
-import pattern from '../imgs/pattern.jpg'
-//Menu redesign 
 
 //onClick handler for selecting menu
 //new components to reperesent all the menus
@@ -52,14 +44,19 @@ const NewMenu = (props) => {
     }, [])
 
     const [selected, setSelected] = useState(0) 
+    const [modalActive, setModalActive] = useState(false)
+
+
     const clickedMenu = (id) => {
         console.log('clicked menu:', id)
         setSelected(id)
     }
 
     const selectItem = (item, href) => {
-   
+        setModalActive(true)
+
         props.setItem(item)
+        console.log(modalActive)
     }
 
     const menu = menuItems.map(item => {
@@ -77,7 +74,7 @@ const NewMenu = (props) => {
         <div className="back-print" >
          <MenuBtns menuOptions={menuOptions} menuClick={clickedMenu} selected={selected}/>
          <div className="menu-list">
-         
+            <ItemModal active={modalActive} setModal={setModalActive}/>
              {menu}
          </div>
         </div>

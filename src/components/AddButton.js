@@ -12,9 +12,9 @@ class AddButton extends React.Component {
     render() {
         console.log(this.props)
         return(
-            <div>
+        
                 <button className='add-btn' onClick={() => this.props.addToCart(this.props.item)}>Add To Cart</button>
-            </div>
+       
         )
     }
 }

@@ -14,7 +14,7 @@ class DashboardMenu extends React.Component {
                     
             return (
                 <div  >
-                    <TacoHeader sign={sign} />
+                    <TacoHeader sign={sign} classProp={'taco-header'}/>
                     <LocationPicker />
                     <NewMenu />
                 </div>                

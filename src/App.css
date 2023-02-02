@@ -352,10 +352,38 @@
   /*----MenuItem----*/
   /*---------------*/
   /*--------------*/
+  .small-menu-item{
+    max-width:410px;
+    margin:0 auto;
+    background:white;
+    height:100%;
+    overflow-y:scroll;
+  }
+
+  ._taco-header{
+    height:300px;
+    background-position:center;
+    background-size:cover;
+  }
+  ._quantity-counter{
+
+  }
+
+  .item-btn{
+    text-align:center;
+  }
+
+  /*----MenuItem----*/
+  /*---------------*/
+  /*--------------*/
+
+  .item-container{
+  }
   .menu-paragraph{
     max-width:310px;
     margin:0 auto 2em;
   }
+
 
   .menu-item{
     text-align: center;
@@ -905,10 +933,7 @@
     font-size:110%;
   }
 
-  .quantity-counter{
-    height: 65px;
-    
-  }
+
 
   .counter-title{
     font-size:135%
@@ -917,26 +942,20 @@
   .sub-heading h2{
     font-size:200%;
   }
-  .chosen{
-    height:230px;
-    width:500px;
-  }
+
   
   .choices{
-    height:203px;
-    width:500px;
+
   }
 
   .sub-grid{
-    max-width:500px;
     grid-template-rows: auto auto;
     grid-template-columns: auto auto;
     grid-gap:1.5em;
   }
 
   .options{
-    width:230px;
-    height:230px;
+
   }
 
   .counter{
@@ -953,6 +972,7 @@
 
   .menu-item-price{
     font-size:150%;
+    text-align:center;
   }
 
   .menu-paragraph{
@@ -1120,6 +1140,10 @@
   .location-container {
     width:30%;
     height:81px;
+  }
+
+  .quantity-counter{
+    margin-bottom:.5em;
   }
 
   @media(min-Width:1400px){

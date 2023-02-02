@@ -14,7 +14,7 @@ const MenuItems = (props) => {
         return (
             //component does not need an add button attach event listener on parent element
             <div onClick={itemChoosen}>
-                <Link to={props.href} className='menu-items'>
+                <div className='menu-items'>
                     <img alt="current food item" className='menu-pic' src={`https://juize.s3.us-west-2.amazonaws.com/${props.img}`}/>
                     {/* <div className='menu-pic' style={{backgroundImage:`url(${props.imgs})`}}></div> */}
                     <div className='simple-flex'>
@@ -22,7 +22,7 @@ const MenuItems = (props) => {
                         <p>{props.description}</p>
                         <div className='menu-price'>${props.price}.00</div>
                     </div>
-                </Link>                    
+                </div>                    
               
             </div>
         )
