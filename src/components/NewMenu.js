@@ -12,27 +12,33 @@ import MenuItems from '../MenuItems'
 const menuOptions = [
     {
         menu:'FamilyMeals',
-        id:0
+        id:0,
+        desc:"We’re committed to continuously evolving our menu so that we’re always WOW-ing our guests with new unexpected flavor combinations. Be sure to check back to discover our Chef’s latest innovations."
     },
     {
         menu:'Dinner Menu',
-        id:1
+        id:1,
+        desc:"We’re committed to continuously evolving our menu so that we’re always WOW-ing our guests with new unexpected flavor combinations. Be sure to check back to discover our Chef’s latest innovations."
     },
     {
         menu:'a La Carte',
-        id:2
+        id:2,
+        desc:"Traditional Mexican dinners that are enough to feed the whole family, All plates feed up to two people"
     },
     {
         menu:'Daily Specials',
-        id:3
+        id:3,
+        desc:"Some of our more unique and seasonal dishes. Get them while they're here. For a limited time!!"
     },
     {
         menu:'Vegan Menu',
-        id:4
+        id:4,
+        desc:"Yes we even have something for you!"
     },
     {
         menu:'Kids Menu',
-        id:5
+        id:5,
+        desc:"RECOMMENDED FOR KIDS 8 & UNDER Served with a kids beverage and sliced apples (organic milk add 2.40)"
     },
 ]
 const NewMenu = (props) => {
@@ -72,7 +78,13 @@ const NewMenu = (props) => {
     return (
         // style={{backgroundImage:`linear-gradient(rgba(255, 218, 224, 0.963), rgba(2255, 218, 224, 0.953)), url(${pattern})`}}
         <div className="back-print" >
+            <h1>MENU</h1>
          <MenuBtns menuOptions={menuOptions} menuClick={clickedMenu} selected={selected}/>
+         <div className="title-paragraph-med">
+            <h2>{menuOptions[selected].menu}</h2>
+            <p>{menuOptions[selected].desc}</p>
+         </div>
+
          <div className="menu-list">
             <ItemModal active={modalActive} setModal={setModalActive}/>
              {menu}

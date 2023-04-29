@@ -80,8 +80,8 @@ class App extends React.Component {
   render(){
     return(
      <BrowserRouter>
-
-      <Navbar />
+      <div className="app-container">
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home promoSub={this.formPromo} />}/>
           <Route path="order" element={<DashboardMenu />}/>
@@ -89,6 +89,8 @@ class App extends React.Component {
           <Route path="cart" element={<Cart items={this.state.cart} />} />
           <Route path="contact" element={<ContactForm contactSub={this.formcontact} />} />
         </Routes> 
+      </div>
+
 
     </BrowserRouter>
 
