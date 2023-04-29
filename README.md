@@ -1,6 +1,39 @@
-# Getting Started with Create React App
+
+# React Food Ordering App and Landing Page
+
+## A fully functional React.js MVP that handles user-order state with react redux.
+
+This project was made to help a local Catering company improve food ordering by having a web app that can attract new clients and provide online food-ordering capabilities. Basic funtionality of the app includes:
+
+* Handling of user state for food ordering 
+* APIs to create and delete food items to build fully customizable menu
+* Secure payment processing
+
+
+## Technologies
+
+* ReactJS 17
+* Express 4.18
+* mongoose 6.5
+* React-Redux 7.2
+* Redux 4.2
+* Redux Thunk 2.4
+* React-Router-dom 6.3
+* Validator 13.7
+* Axios 0.27
+
+
+## Getting Started with this React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+After you clone this repo to your desktop, go to the juice directory and run npm install to install its dependencies.
+
+after installing the dependencies on the frontend(juice) navigate to the backend directory and run npm install to install the servers dependencies.
+
+Once all dependencies are installed, you can run npm start in the juice directory to start the application. You will then be able to access it at localhost:3000
+
+To start the server navigate to the server directory and run node app.js
 
 ## Available Scripts
 
@@ -29,7 +62,7 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+<!-- ### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
@@ -67,4 +100,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->
+ -->
